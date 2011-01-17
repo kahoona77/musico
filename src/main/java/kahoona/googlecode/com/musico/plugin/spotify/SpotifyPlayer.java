@@ -1,4 +1,4 @@
-package kahoona.googlecode.com.musico.player.spotify;
+package kahoona.googlecode.com.musico.plugin.spotify;
 
 import kahoona.googlecode.com.musico.player.Player;
 import kahoona.googlecode.com.musico.player.Song;
@@ -7,15 +7,14 @@ import de.felixbruns.jotify.api.media.File;
 import de.felixbruns.jotify.api.media.Track;
 import de.felixbruns.jotify.api.player.PlaybackListener;
 
-public class SpotifyPlayer implements Player {
+public class SpotifyPlayer extends Player {
 	
 	public static final String ID = "kahoona.googlecode.com.musico.player.spotify.SpotifyPlayer";
 
 	private JotifyConnection jotify = new JotifyConnection();
-	private PlaybackListener playbackListner;
 
 	public SpotifyPlayer(PlaybackListener playbackListener) {
-		this.playbackListner = playbackListener;
+		super(playbackListener);
 	}
 
 	@Override
@@ -43,7 +42,7 @@ public class SpotifyPlayer implements Player {
 		}
 
 		/* Start playing */
-		jotify.play(track, File.BITRATE_160, this.playbackListner);
+		jotify.play(track, File.BITRATE_160, this.getPlaybackListner());
 	}
 
 	@Override

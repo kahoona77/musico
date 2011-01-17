@@ -3,7 +3,7 @@ package kahoona.googlecode.com.musico;
 import java.io.IOException;
 
 import kahoona.googlecode.com.musico.player.Song;
-import kahoona.googlecode.com.musico.player.spotify.SpotifyPlayer;
+import kahoona.googlecode.com.musico.plugin.spotify.SpotifyPlayer;
 
 import org.tritonus.share.sampled.file.THeaderlessAudioFileWriter;
 

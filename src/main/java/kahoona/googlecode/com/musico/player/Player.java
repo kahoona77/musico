@@ -1,15 +1,31 @@
 package kahoona.googlecode.com.musico.player;
 
+import de.felixbruns.jotify.api.player.PlaybackListener;
 
-public interface Player {
+
+public abstract class Player {
 	
-	public void init() throws Exception;
+	private PlaybackListener playbackListner;
+
+	public Player(PlaybackListener playbackListener) {
+		this.playbackListner = playbackListener;
+	}
+
+	public abstract void init() throws Exception;
 	
-	public void play(Song song) throws Exception;
+	public abstract void play(Song song) throws Exception;
 	
-	public void pause();
+	public abstract void pause();
 	
-	public void stop();
+	public abstract void stop();
 	
-	public String getID();
+	public abstract String getID();
+
+	public PlaybackListener getPlaybackListner() {
+		return playbackListner;
+	}
+
+	public void setPlaybackListner(PlaybackListener playbackListner) {
+		this.playbackListner = playbackListner;
+	}
 }

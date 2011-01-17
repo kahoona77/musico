@@ -9,7 +9,7 @@ import de.felixbruns.jotify.api.player.PlaybackAdapter;
 import kahoona.googlecode.com.musico.player.PlayQueue;
 import kahoona.googlecode.com.musico.player.Player;
 import kahoona.googlecode.com.musico.player.Song;
-import kahoona.googlecode.com.musico.player.spotify.SpotifyPlayer;
+import kahoona.googlecode.com.musico.plugin.spotify.SpotifyPlayer;
 
 public class Controller extends PlaybackAdapter {
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface ContentProvider {
 
-	public void init();
+	public void init() throws Exception;
 	
 	public String getID();
 	

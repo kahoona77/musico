@@ -1,10 +1,6 @@
-package kahoona.googlecode.com.musico.player;
+package kahoona.googlecode.com.musico.content;
 
-public class Song {
-
-	private String id;
-	
-	private String name;
+public class Song extends ContentItem{
 	
 	private String artist;
 	
@@ -13,22 +9,6 @@ public class Song {
 	private int length;
 	
 	private String playerID;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public String getArtist() {
 		return artist;

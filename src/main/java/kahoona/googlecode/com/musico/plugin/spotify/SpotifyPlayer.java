@@ -1,7 +1,7 @@
 package kahoona.googlecode.com.musico.plugin.spotify;
 
+import kahoona.googlecode.com.musico.content.Song;
 import kahoona.googlecode.com.musico.player.Player;
-import kahoona.googlecode.com.musico.player.Song;
 import de.felixbruns.jotify.api.JotifyConnection;
 import de.felixbruns.jotify.api.media.File;
 import de.felixbruns.jotify.api.media.Track;
@@ -27,6 +27,11 @@ public class SpotifyPlayer extends Player {
 	@Override
 	public void pause() {
 		jotify.pause();
+	}
+	
+	@Override
+	public void play() {
+		jotify.play();
 	}
 
 	@Override

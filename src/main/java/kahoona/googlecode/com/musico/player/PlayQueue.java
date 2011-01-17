@@ -3,6 +3,8 @@ package kahoona.googlecode.com.musico.player;
 import java.util.ArrayList;
 import java.util.List;
 
+import kahoona.googlecode.com.musico.content.Song;
+
 
 public class PlayQueue {
 	private List<Song> queue = new ArrayList<Song>();
@@ -15,10 +17,14 @@ public class PlayQueue {
 		queue.add(position, song);
 	}
 	
+	public Song getCurrent(){
+		return queue.get(position);
+	}
+	
 	public Song getNext(){
 		position++;
-		if (position > queue.size()) {
-			position = queue.size();
+		if (position >= queue.size()) {
+			position = queue.size() -1;
 		}
 		return queue.get(position);
 	}
